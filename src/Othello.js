@@ -1,6 +1,6 @@
 import React from "react";
 import './Othello.css';
-// import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 function Square(props) {
     let colorMarkerClasses = props.value === 'X' ? 'marker white' : props.value === 'O' ? 'marker black' : '';
@@ -131,7 +131,7 @@ class Game extends React.Component {
                     <div>Black markers: {oNumbers}</div>
                 </div>
                 <div>
-                    {/*<AmplifySignOut />*/}
+                    <AmplifySignOut />
                 </div>
             </div>
         )
@@ -465,4 +465,4 @@ class Game extends React.Component {
     }
 }
 
-export default Game;
+export default withAuthenticator(Game);
