@@ -73,18 +73,19 @@ class Game extends React.Component {
         const xNumbers = this.state.squares.reduce((result, value) => {return value === 'X' ? result + 1 : result}, 0);
         const oNumbers = this.state.squares.reduce((result, value) => {return value === 'O' ? result + 1 : result}, 0);
         const current = this.state.squares.slice();
+        const checker = this.state.whiteIsNext;
 
         if (this.calculateWinner(xNumbers, oNumbers) || current[i]) {
             return;
         }
 
-        if (this.checkValid(current, i, this.state.whiteIsNext)) {
+        if (this.checkValid(current, i, checker)) {
             this.setState({squares: this.doMove(current, i)});
-        } else {
-            return;
         }
-        if (this.checkLegitMove(!this.state.whiteIsNext)) {
-            this.setState({whiteIsNext: !this.state.whiteIsNext});
+        if (this.checkLegitMove(!checker)) {
+            this.setState({whiteIsNext: !checker});
+        } else {
+            this.setState({whiteIsNext: checker});
         }
     }
 
@@ -119,7 +120,10 @@ class Game extends React.Component {
                         />
                     </div>
                     <div className={"game-status"}>
-                        {status}&nbsp;{winner ? <button onClick={() => this.resetGame()}>Play again</button> : ''}
+                        {status}
+                    </div>
+                    <div className={"reset"}>
+                        {winner ? <button onClick={() => this.resetGame()}>Play again</button> : <button onClick={() => this.resetGame()}>Reset Game</button>}
                     </div>
                 </div>
                 <div className={"game-info"}>
