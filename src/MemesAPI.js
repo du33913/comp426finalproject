@@ -36,7 +36,7 @@ function Conditions(props) {
     } else {
         let obj = JSON.parse(checker);
         return (
-            <img src={obj.message} alt={""}/>
+            <img src={obj.message} alt={""} style={{width: 400, height: 400}}/>
         )
     }
 }
