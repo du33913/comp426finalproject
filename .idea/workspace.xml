@@ -7,6 +7,8 @@
       <change beforePath="$PROJECT_DIR$/src/ChuckNorrisAPI.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChuckNorrisAPI.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChuckNorrisAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChuckNorrisAPI.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MemesAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MemesAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +89,7 @@
       <updated>1624133258401</updated>
       <workItem from="1624133260104" duration="973000" />
       <workItem from="1624134277351" duration="93000" />
-      <workItem from="1624134394063" duration="29518000" />
+      <workItem from="1624134394063" duration="31836000" />
     </task>
     <servers />
   </component>
