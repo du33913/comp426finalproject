@@ -6,7 +6,7 @@ function ChuckNorrisAPI(props) {
     let [responseObj, setResponseObj] = useState({});
 
     function getJoke() {
-        fetch("http://api.icndb.com/jokes/random?escape=javascript", {
+        fetch("https://api.chucknorris.io/jokes/random", {
             "method": "GET",
         })
             .then(response => response.json())
@@ -42,7 +42,7 @@ function Conditions(props) {
         let obj = JSON.parse(checker);
         return (
             <div>
-                {obj.value.joke}
+                {obj.value}
             </div>
         )
     }
