@@ -10,6 +10,8 @@ COVID data in the US and render it in the form of a widget.
 
 Thanks for taking the time to review this, and I hope you enjoy the experience!
 
+Here's the link to the website : https://master.d1jrnfx10ucpi6.amplifyapp.com 
+
 
 
 # Getting Started with Create React App
