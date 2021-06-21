@@ -1,3 +1,17 @@
+# Welcome to my final project! 
+
+The main focus of this assignment is a representation of Othello, a propular board game.
+
+This website's frontend was built using the React framework, and the backend is hosted by Amazon Web Services (AWS) where a complete system including
+authentication, user accounts and login for the website has been implemented.
+
+I have also incorporated 3 3rd-party APIs - one to retrieve random Chuck Norris jokes, one to retrieve random pictures of cute dogs :), and another to retrieve
+COVID data in the US and render it in the form of a widget.
+
+Thanks for taking the time to review this, and I hope you enjoy the experience!
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
