@@ -1,6 +1,8 @@
 import React from "react";
 import './Othello.css';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import ChuckNorrisAPI from "./ChuckNorrisAPI";
+import MemesAPI from "./MemesAPI";
 
 function Square(props) {
     let colorMarkerClasses = props.value === 'X' ? 'marker white' : props.value === 'O' ? 'marker black' : '';
@@ -81,11 +83,13 @@ class Game extends React.Component {
 
         if (this.checkValid(current, i, checker)) {
             this.setState({squares: this.doMove(current, i)});
-        }
-        if (this.checkLegitMove(!checker)) {
-            this.setState({whiteIsNext: !checker});
-        } else {
+            if (this.checkLegitMove(!checker)) {
+                this.setState({whiteIsNext: !checker});
+            }
+        } else if (this.checkLegitMove(checker)) {
             this.setState({whiteIsNext: checker});
+        } else if (this.checkLegitMove(!checker)) {
+            this.setState({whiteIsNext: !checker});
         }
     }
 
@@ -111,6 +115,14 @@ class Game extends React.Component {
 
         return (
             <div className="game">
+                <header className={"othello"}>
+                    {"Welcome to Othello!"}
+                    <br/>
+                    {"The goal is to make pieces of your colour constitute a majority of the pieces on the board at the end of the game, by turning over as many of your opponent's pieces as possible."}
+                    <br/>
+                    {"Good luck, and happy gaming!"}
+                </header>
+                <br/>
                 <div className="game-left-side">
                     <div className="game-board">
                         <Board
@@ -129,6 +141,18 @@ class Game extends React.Component {
                 <div className={"game-info"}>
                     <div>White markers: {xNumbers}</div>
                     <div>Black markers: {oNumbers}</div>
+                </div>
+                <div>
+                    <iframe className={"covid"} title="COVID widget" src="https://covid-19.dataflowkit.com/assets/widget/c19-widget-dark.html"
+                            frameBorder="0" scrolling="no"
+                            width="450" height="250">
+                    </iframe>
+                </div>
+                <div>
+                    <ChuckNorrisAPI />
+                </div>
+                <div className={"memes"}>
+                    <MemesAPI />
                 </div>
                 <div>
                     <AmplifySignOut />
